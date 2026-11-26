@@ -1,0 +1,5 @@
+node_modules/
+*.zip
+*.m4a
+*.mp3
+.env*
