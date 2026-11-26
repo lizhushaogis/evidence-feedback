@@ -1,0 +1,92 @@
+{
+  "normal": {
+    "passed": true,
+    "provider": "deepseek",
+    "model": "deepseek-flash",
+    "taskId": "eeecd506-caf6-47c6-8f6c-a5442a6fe0a8",
+    "status": "confirmed",
+    "total": 18,
+    "toolSteps": 12,
+    "tools": [
+      "read_skill",
+      "read_material",
+      "read_material",
+      "read_material",
+      "read_material",
+      "find_evidence",
+      "find_evidence",
+      "find_evidence",
+      "record_assessment",
+      "read_skill",
+      "verify_judgment",
+      "finish"
+    ],
+    "semanticAuditPassed": true,
+    "unconfirmedExportBlocked": true,
+    "requestIds": [
+      "51b7d5ab-76e1-4b64-81fa-fb0d80469c79",
+      "b3480a11-e66a-4fba-b363-9d1c95c38e0a",
+      "64a9fe85-b1df-4543-ae73-733a39f9cc44",
+      "d1d126f7-a5a2-4fd8-83cf-dea7a706a097",
+      "31140b58-8a57-49f2-87e2-fb1b9c8fabb1",
+      "5987fc5c-ae23-4ba4-beaf-39ddb12c7d70",
+      "523c8ba1-1422-4b22-af92-336655d9f37f",
+      "878d871f-e827-4ce8-9543-522b2ab41341",
+      "b549aa58-c5f0-4066-9f8f-2dd7f688ed10"
+    ],
+    "fixture": "公开编写的研究方法示例，无真实学生信息",
+    "testedAt": "2026-11-26T14:28:25.725Z"
+  },
+  "paths": {
+    "passed": true,
+    "ocr": {
+      "model": "deepseek-flash",
+      "requestId": "0ca0372d-ee91-4a2d-baa9-c664f2b444d7",
+      "text": "仅凭均值不能推断因果。\n\n建议随机分组，控制先验差异。",
+      "teacherConfirmed": true
+    },
+    "missingEvidence": {
+      "askedTeacher": "学生答案全文为「答：因为[无法辨识]，所以[无法辨识]。」，关键因果解释内容均无法辨识（系统虽标 ocr_requires_teacher_confirmation=false，但实际正文不可辨认），无锚卷（anchor 材料为空）。按量规“无法辨识的原文必须请求教师补证，不得按缺证扣分”，请提供可辨认的答案原文，或明确是否按现有可辨识内容（仅“因为…所以…”结构，无实质内容）给分及依据。收到补证后我会重新读取答案并重建R1（因果推断与改进，满分20）证据链。",
+      "resumed": true,
+      "score": [
+        20
+      ],
+      "auditPassed": true,
+      "requestIds": [
+        "4d5992c5-b4de-4eeb-b737-a61a7c7fc2f6",
+        "6f36ca36-85d9-49f0-bc01-6a3da0d58432",
+        "f0753245-ce07-47c4-9cc0-5ff772c637a5",
+        "fd8720c2-ca2c-4db8-a5b9-644ca4b475d7",
+        "b3c168d5-5f0a-43e4-a080-7b3a79eb458a",
+        "e60c568f-2798-4201-93da-7979857b1112",
+        "6543bb2c-5550-485e-9751-efac9a1c5afa",
+        "ae52ef60-2170-4a6a-a670-6f49b4c15ebd",
+        "7a56bb22-1093-4674-871e-d2f86af43e77",
+        "4e169e19-2e47-4614-8fb4-b63b852241c6",
+        "aea6a71a-746b-4211-b8db-6e93503b8236",
+        "a9ae67b4-370c-46ba-919e-f521826eb6d0",
+        "f31ec2f8-e541-4845-b4ac-5d25621963dd"
+      ],
+      "tools": [
+        "read_skill",
+        "read_material",
+        "read_material",
+        "read_material",
+        "read_material",
+        "ask_teacher",
+        "read_skill",
+        "ask_teacher",
+        "read_material",
+        "find_evidence",
+        "find_evidence",
+        "find_evidence",
+        "record_assessment",
+        "read_skill",
+        "verify_judgment",
+        "finish"
+      ]
+    },
+    "fixture": "自制文本图片与虚构缺证答案，无真实学生信息",
+    "testedAt": "2026-11-26T14:29:36.988Z"
+  }
+}

@@ -1,5 +1,7 @@
 # ReAct循环与Skills机制
 
+实现更新：此文原先描述v2静态模拟器。当前另有真实DeepSeek后端backend/core.mjs与backend/skills.mjs，模型实际通过read_skill加载规程并选择工具；界面live.html / live.js。工具预算16次，服务端依白名单和schema执行，保留request ID；文本、图片及缺证恢复均已实测。GitHub Pages静态版仍保留v2行为。真实版边界与已发现问题以docs/live-validation.md为准。
+
 ## 目标与执行合同
 
 目标是为每个建议分数找到可追溯依据，缺证时停下。每轮读取目标、原文、量规、上一工具观察、补证状态与预算，由决策器选择技能和工具；调度器做白名单校验后执行，返回结构化观察并更新状态。不是固定步骤成功动画。
